@@ -14,7 +14,7 @@ font-family: Arial, Helvetica, sans-serif;
 
 body {
     position: relative;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 nav {
@@ -61,18 +61,13 @@ footer p {
     justify-content: center;
 }
 
-.beer-container {
+#beers .beer-container {
     width: 400px;
     height: 400px;
 }
 
 .beer-container img {
     height: 200px;
-}
-
-.beer-container h3 {
-    font-size: 1.5rem;
-    font-weight: 900;
 }
 
 #logo {
@@ -89,3 +84,98 @@ footer p {
     border-radius: 5px;
     font-weight: 500;
 }
+
+#beers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem 7rem;
+}
+
+#beers > .beer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.beer-container a {
+    color: black;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.beer-tagline {
+    color: #bfbfbf;
+}
+
+#beers .beer-tagline {
+    font-size: 0.7rem;
+    margin: 0.2rem 0 0.5rem;
+}
+
+#beers .beer-description {
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+#beers .beer-container img {
+    margin-bottom: 0.5rem;
+}
+
+#beers .beer-name {
+    font-size: 1.1rem;
+}
+
+#beer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#beer > .beer-container {
+    position: relative;
+    margin: 3rem;
+    width: 50%;
+}
+
+#beer .beer-img {
+    position: absolute;
+    left: -150px;
+}
+
+#beer .beer-name {
+    font-size: 2rem;
+}
+
+#beer .beer-tagline {
+    margin: 1rem 0;
+}
+
+#beer .beer-description {
+    margin: 1rem 0;
+}
+
+#beer .beer-food-pairings {
+    margin: 1rem 0;
+}
+
+#beer .beer-food-pairings ul {
+    margin: 1rem 2rem;
+}
+
+#beer .beer-food-pairing {
+    margin: 1rem 0.5rem;
+
+}
+
+#beer .beer-brewers-tips {
+    margin: 1rem 0;
+
+}
+
+
+
+
