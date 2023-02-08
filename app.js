@@ -31,7 +31,7 @@ app.get('/beers/beer-:beerId', async (req, res, next) => {
     const beer = raw[0];
     res.locals.title = beer.name;
     res.locals.beer = beer;
-    res.render('beer');
+    res.render('specific-beer');
   } catch (error) {
     next(error);
   }
@@ -59,8 +59,20 @@ app.get('/random-beer', async (req, res, next) => {
   }
 });
 
+app.get('*', (req, res)=>{
+  res.statusCode = 404;
+  res.locals.title = 'Error 404';
+  res.locals.error = {message: `Page '${req.baseUrl}' not found.`, statusCode: res.statusCode}
+  res.render('Error')
+})
+
 app.use((error, req, res, next) => {
   console.log('ERROR:', error.message);
+  res.locals.title = "Error 500";
+  res.statusCode = 500;
+  res.locals.error = error;
+  res.locals.error.statusCode = res.statusCode;
+  res.render('error')
 })
 
 app.listen(3000, () => console.log('🏃‍ on port 3000'));

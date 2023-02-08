@@ -1,0 +1,34 @@
+<div id="beer">
+    {{log beer.ingredients}}
+    <div class="beer-container">
+        {{>beerminordetailspartial beer}}
+
+        <p class="beer-detail">
+            <strong>First brewed on: </strong>{{beer.first_brewed}}
+        </p>
+
+        <p class="beer-detail">
+            <strong>pH-level: </strong>{{beer.ph}}
+        </p>
+
+        <p class="beer-ingredients">
+            <h3>Ingredients: </h3>
+            <h4>Malt:</h4>
+            <ul>
+                {{#each beer.ingredients.malt}}
+                    <li>{{name}}({{amount.value}} {{amount.unit}})</li>
+                {{/each}}
+            </ul>
+            
+            <p>
+                <h4>Hops: </h4>
+                <ul>
+                    {{#each beer.ingredients.hops}}
+                        <li>{{name}}({{amount.value}} {{amount.unit}}) </li>
+                    {{/each}}
+                </ul>
+            </p>
+            <p><h4>Yeast: </h4>{{beer.ingredients.yeast}}</p>
+        </p>
+    </div>
+</div>

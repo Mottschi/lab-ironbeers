@@ -150,29 +150,17 @@ footer p {
     font-size: 2rem;
 }
 
-#beer .beer-tagline {
+#beer .beer-detail {
     margin: 1rem 0;
 }
 
-#beer .beer-description {
-    margin: 1rem 0;
-}
 
-#beer .beer-food-pairings {
-    margin: 1rem 0;
-}
-
-#beer .beer-food-pairings ul {
+#beer ul {
     margin: 1rem 2rem;
 }
 
-#beer .beer-food-pairing {
+#beer li {
     margin: 1rem 0.5rem;
-
-}
-
-#beer .beer-brewers-tips {
-    margin: 1rem 0;
 
 }
 
